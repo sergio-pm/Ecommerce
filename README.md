@@ -1,4 +1,4 @@
-# Ecommerce_VirtualCave
+# Ecommerce
 # spring-boot-exercice-1
 
 Imagina que estamos trabajando en un proyecto para la plataforma de e-commerce de una compañía. Dicha empresa gestiona varias marcas dentro de dicha plataforma.
