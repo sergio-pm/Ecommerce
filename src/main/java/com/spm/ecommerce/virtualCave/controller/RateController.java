@@ -36,4 +36,10 @@ public class RateController {
         return ResponseEntity.noContent().build();
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> delete(@PathVariable("id") Long id) {
+        this.rateService.deleteRate(id);
+        return ResponseEntity.noContent().build();
+    }
+
 }
