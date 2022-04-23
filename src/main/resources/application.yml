@@ -6,7 +6,7 @@ spring:
       ddl-auto: create-drop
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/ecommerce_db
-    username: root
+    url: jdbc:postgresql://localhost:5432/exercisedb
+    username: postgres
     password: admin
     driverClassName: org.postgresql.Driver

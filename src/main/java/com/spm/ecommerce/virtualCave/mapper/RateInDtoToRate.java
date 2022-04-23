@@ -4,7 +4,6 @@ import com.spm.ecommerce.virtualCave.persistence.entitys.Rate;
 import com.spm.ecommerce.virtualCave.service.dto.RateInDto;
 import org.springframework.stereotype.Component;
 
-import java.time.LocalDateTime;
 
 @Component
 public class RateInDtoToRate implements IMapper<RateInDto, Rate> {
@@ -12,14 +11,11 @@ public class RateInDtoToRate implements IMapper<RateInDto, Rate> {
     public Rate map(RateInDto in) {
         Rate rate =new Rate();
         rate.setBrandId(in.getBrandId());
-
-
-      brandId;
-        productId;
-        startDate;
-        endDate;
-        price;
-        currencyCode;
-        return null;
+        rate.setProductId(in.getProductId());
+        rate.setStartDate(in.getStartDate());
+        rate.setEndDate(in.getEndDate());
+        rate.setPrice(in.getPrice());
+        rate.setCurrencyCode(in.getCurrencyCode());
+        return rate;
     }
 }
