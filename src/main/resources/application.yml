@@ -3,10 +3,10 @@ spring:
     database: POSTGRESQL
     show-sql: true
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: update
   datasource:
     platform: postgres
-    url: jdbc:postgresql://localhost:5432/exercisedb
+    url: "jdbc:postgresql://localhost:5432/exercicedb"
     username: postgres
     password: admin
     driverClassName: org.postgresql.Driver

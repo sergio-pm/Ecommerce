@@ -13,4 +13,5 @@ public class RateInDto {
     private LocalDateTime endDate;
     private int price;
     private String currencyCode;
+    private String totalPrice;
 }

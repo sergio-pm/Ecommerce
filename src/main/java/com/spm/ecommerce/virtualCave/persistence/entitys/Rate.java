@@ -7,7 +7,7 @@ import java.time.LocalDateTime;
 
 @Data
 @Entity
-@Table(name="T_rates")
+@Table(name="t_rates")
 public class Rate {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

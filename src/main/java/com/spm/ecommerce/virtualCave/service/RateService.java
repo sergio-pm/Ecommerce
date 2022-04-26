@@ -23,6 +23,8 @@ public class RateService {
         this.mapper = mapper;
     }
 
+    
+
     public Rate createRate(RateInDto rateInDto){
         Rate rate =mapper.map(rateInDto);
         return this.repository.save(rate);
@@ -31,6 +33,7 @@ public class RateService {
     @Transactional(readOnly = true)
     public List<Rate> getRate(Long id) {
         Optional<Rate> optionalRate = this.repository.findById(id);
+
         if (optionalRate.isEmpty()) {
             throw new RateExceptions("Rate not Found", HttpStatus.NOT_FOUND);
         }
@@ -56,7 +59,7 @@ public class RateService {
             throw new RateExceptions( "Rate not Found", HttpStatus.NOT_FOUND);
         }
 
-        this.repository.findById(id);
+        this.repository.deleteById(id);
     }
 
 }

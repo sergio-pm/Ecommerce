@@ -5,17 +5,18 @@ import com.spm.ecommerce.virtualCave.service.RateService;
 import com.spm.ecommerce.virtualCave.service.dto.RateInDto;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
-import java.net.http.HttpResponse;
 import java.util.List;
+
 
 @RestController
 @RequestMapping("/rates")
+
 
 public class RateController {
     private final RateService rateService;
 
     public RateController(RateService rateService) {
+
         this.rateService = rateService;
     }
 
@@ -27,6 +28,7 @@ public class RateController {
 
     @GetMapping("/byId/{id}")
     public List<Rate> getRate(@PathVariable("id") Long id){
+
         return this.rateService.getRate(id);
     }
 
@@ -36,10 +38,15 @@ public class RateController {
         return ResponseEntity.noContent().build();
     }
 
-    @DeleteMapping("/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<Void> delete(@PathVariable("id") Long id) {
         this.rateService.deleteRate(id);
         return ResponseEntity.noContent().build();
     }
+
+
+
+
+
 
 }

@@ -7,8 +7,11 @@ import org.springframework.stereotype.Component;
 
 @Component
 public class RateInDtoToRate implements IMapper<RateInDto, Rate> {
+
+
     @Override
     public Rate map(RateInDto in) {
+
         Rate rate =new Rate();
         rate.setBrandId(in.getBrandId());
         rate.setProductId(in.getProductId());
