@@ -1,4 +1,4 @@
-package com.spm.ecommerce.virtualCave.persistence.entitys;
+package com.spm.ecommerce.virtualCave.persistence.entities;
 
 import lombok.Data;
 
