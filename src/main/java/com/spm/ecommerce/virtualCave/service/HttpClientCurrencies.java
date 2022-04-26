@@ -1,9 +1,9 @@
 package com.spm.ecommerce.virtualCave.service;
 
 
-import com.spm.ecommerce.virtualCave.persistence.entitys.Currency;
+import com.spm.ecommerce.virtualCave.persistence.entities.Currency;
 
-import com.spm.ecommerce.virtualCave.persistence.entitys.Rate;
+import com.spm.ecommerce.virtualCave.persistence.entities.Rate;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 

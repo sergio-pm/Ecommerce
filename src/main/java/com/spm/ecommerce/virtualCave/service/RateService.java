@@ -2,7 +2,7 @@ package com.spm.ecommerce.virtualCave.service;
 
 import com.spm.ecommerce.virtualCave.exceptions.RateExceptions;
 import com.spm.ecommerce.virtualCave.mapper.RateInDtoToRate;
-import com.spm.ecommerce.virtualCave.persistence.entitys.Rate;
+import com.spm.ecommerce.virtualCave.persistence.entities.Rate;
 import com.spm.ecommerce.virtualCave.persistence.repository.RateRepository;
 import com.spm.ecommerce.virtualCave.service.dto.RateInDto;
 import org.springframework.http.HttpStatus;
@@ -62,5 +62,14 @@ public class RateService {
         this.repository.deleteById(id);
     }
 
+    public List<Rate> getRateByDate(String fecha, int brandId,int productId) {
+        List<Rate> rateList =this.repository.getRateByDate(fecha,brandId,productId);
+        if (rateList.isEmpty())
+        {
+            throw new RateExceptions( "Rate not Found", HttpStatus.NOT_FOUND);
+        }
+
+        return rateList;
+    }
 }
 
