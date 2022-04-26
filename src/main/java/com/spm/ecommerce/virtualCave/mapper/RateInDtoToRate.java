@@ -1,6 +1,6 @@
 package com.spm.ecommerce.virtualCave.mapper;
 
-import com.spm.ecommerce.virtualCave.persistence.entitys.Rate;
+import com.spm.ecommerce.virtualCave.persistence.entities.Rate;
 import com.spm.ecommerce.virtualCave.service.dto.RateInDto;
 import org.springframework.stereotype.Component;
 
