@@ -1,6 +1,6 @@
 package com.spm.ecommerce.virtualCave.controller;
 
-import com.spm.ecommerce.virtualCave.persistence.entitys.Rate;
+import com.spm.ecommerce.virtualCave.persistence.entities.Rate;
 import com.spm.ecommerce.virtualCave.service.RateService;
 import com.spm.ecommerce.virtualCave.service.dto.RateInDto;
 import org.springframework.http.ResponseEntity;
@@ -42,6 +42,12 @@ public class RateController {
     public ResponseEntity<Void> delete(@PathVariable("id") Long id) {
         this.rateService.deleteRate(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/byDate/{date}")
+    public List<Rate> get(@PathVariable("fecha") String fecha, int brandId, int productId){
+
+        return this.rateService.getRateByDate(fecha,brandId,productId);
     }
 
 
